@@ -6,10 +6,14 @@ function NavbarCategories({to, title}){
     return(
     <>
         <nav>
-           
-            <Link to='/'>Inicio</Link>
-            <Link to='/'>Desenhos</Link>
-            <Link to='/'>Filmes</Link>
+
+            <h1 className='logo'> <p className='freeText'>Free</p> TimeShow </h1>
+
+            <div className="links">
+            <a href="/">INICIO</a> 
+            <a href="#cartoon">DESENHOS</a>
+
+            </div>
     
         </nav>
     </>
