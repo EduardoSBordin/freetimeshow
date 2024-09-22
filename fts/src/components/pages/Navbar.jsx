@@ -2,6 +2,11 @@ import '../styles/Navbar.css'
 
 function Navbar({to, title}){
 
+    function showModal(){
+        document.querySelector('.menuModal').classList.toggle('active');
+        document.querySelector('.btnModal').classList.toggle('active');
+    }
+
     return(
     <>
         <nav>
@@ -12,6 +17,15 @@ function Navbar({to, title}){
             <a href="#home">INICIO</a> 
             <a href="#cartoon">DESENHOS</a>
 
+            </div>
+
+            <div className="linkMobile">
+                <button className='btnModal' onClick={showModal}></button>
+
+                <div className="menuModal">
+                <a href="#home">INICIO</a> 
+                <a href="#cartoon">DESENHOS</a>
+                </div>
             </div>
     
         </nav>

@@ -10,37 +10,46 @@ nav{
     width: 100%;
     height: 50px;
 
-    background: rgba(0, 0, 0, 0.521);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+     background: #44007400; 
+   /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    -webkit-backdrop-filter: blur(5px); */
+    /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 
     z-index: 100000;
 }
 nav a{
+    background: #440074;
     color: #ffff13;
+    padding: 7px;
+    border-radius: 15px;
     text-decoration: none;
     text-align: center;
     font-weight: bolder;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    transition: .3s;
-   border-bottom: 1px solid transparent;
 }
 nav a:hover{
-    border-bottom: 2px solid #ffff13;
+    color: #440074;
+    background: #ffff13;
 }
 .freeText{
     background: #440074;
     font-size: 18pt;
     width: 60px;
     color: white;
-    border-radius: 5pt;
+    border-radius: 5px 0px 0px 5px;
+    padding: 3px;
 }
 .logo{
     margin-top: 0px;
     display: flex;
     flex-direction: row;
+    background: #ffff13;
+    color: #440074;
+    border-radius: 10px;
+    font-size: 22pt;
+    padding: 3px;
 }
 .links{
 
@@ -49,4 +58,74 @@ nav a:hover{
     flex-direction: row;
     gap: 10px;
     flex-wrap: wrap;
+}
+.linkMobile{
+    display: none;
+}
+@media screen and (max-width:600px){
+    
+    .links{
+        margin-top: 10px;
+        background-color: rgba(255, 0, 0, 0);
+        display: none;
+    }
+    .logo{
+        margin-top: 10px;
+    }
+    nav{
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .linkMobile{
+        display: block;
+        background: rgba(65, 57, 57, 0);
+        width: 100px;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 5px;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .menuModal{
+        display: none;
+        position:fixed;
+        flex-direction: column;
+    background: rgba(68, 0, 116, 0.69);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+        padding: 10px;
+        margin-left: -10px;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .menuModal.active{
+        display: flex;
+    }
+    .btnModal{
+        background: transparent;
+        font-weight: bolder;
+        font-size:16pt;
+        background: #440074;
+        color: #ffff13;
+        border: 3px solid #ffff13;
+        border-radius: 5px;
+        padding: 5px;
+        width: 50px;
+    }
+    .btnModal::after{
+        content: '=';
+    }
+    .btnModal.active::after{
+        content: '';
+    }
+    .btnModal.active::before{
+        content: 'x';
+    }
 }
