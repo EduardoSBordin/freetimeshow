@@ -1,4 +1,5 @@
 import '../styles/Navbar.css'
+import { Link } from 'react-router-dom';
 
 function Navbar({to, title}){
 
@@ -14,8 +15,9 @@ function Navbar({to, title}){
             <h1 className='logo'> <p className='freeText'>Free</p> TimeShow </h1>
 
             <div className="links">
-            <a href="#home">INICIO</a> 
-            <a href="#cartoon">DESENHOS</a>
+
+            <Link to='/' className='linkMenu' href="#upHome">Inicio</Link>
+            <Link to='/hamburguer' className='linkMenu'>Desenhos</Link>
 
             </div>
 
@@ -23,8 +25,8 @@ function Navbar({to, title}){
                 <button className='btnModal' onClick={showModal}></button>
 
                 <div className="menuModal">
-                <a href="#home">INICIO</a> 
-                <a href="#cartoon">DESENHOS</a>
+                <Link to='/' className='linkMenu'>Inicio</Link>
+                <Link to='/hamburguer'  className='linkMenu'>Desenhos</Link>
                 </div>
             </div>
     

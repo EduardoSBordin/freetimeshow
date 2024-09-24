@@ -24,14 +24,7 @@
     border-bottom: 0px solid #ffff13;
   }
   
-  
-  #home{
-    background-image: url(../imgs/simCover.jpg);
-    background-attachment:scroll;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-  }
+
   #cartoon{
     width: 80%;
     height: 500px;
@@ -52,7 +45,7 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px); */
-
+    
     background: linear-gradient(#ffffff00,#440074);
     width: 100%;
     height: 100%;

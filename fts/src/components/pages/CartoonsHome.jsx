@@ -1,16 +1,8 @@
-import sim from '../imgs/sim1.jpg'
-import courage from '../imgs/couragedog.png'
-import bob from '../imgs/spongebob.jpg'
-import ham from '../imgs/ham2.jpg'
-
+import '../styles/CartoonsHome.css'
+import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
-
-import '../styles/CartoonsHome.css'
-
-import { Link } from 'react-router-dom'
-// import '../styles/Lab.css'
 
 function CartoonsHome(){
 
@@ -28,35 +20,48 @@ function CartoonsHome(){
     return(
         <div className='container'>
             <h1>DESENHOS</h1>
-        <Slider {...settings}>
-                
+        
+            <Slider {...settings}>
+
+        
+        
                 <div className="img_hover_zoom">
-                    <Link to='/hamburguer'>
-                        {/* <span className="material-symbols-outlined">play_circle</span> */}
-                    <img src={ham} alt="Not suported" />
+                    <Link to='/hamburguer' href="#divContainer" className='boxImg'>
+                        <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/jyIWUZCtt3pRxi727NxFjhcdzNd.jpg" alt="Not suported" />
                     </Link>
                 </div>
 
                 <div className="img_hover_zoom">
-                    <Link to='/'>
-                        {/* <span className="material-symbols-outlined">play_circle</span> */}
-                    <img src={sim} alt="Not suported" />
+                    <Link to='/simpsons' href="#divContainer" className='boxImg'>
+                        <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/1jGPgDDcmg3Xgs3WO8sfYfbnFoA.jpg" alt="Not suported" />
                     </Link>
                 </div>
 
 
                 <div className="img_hover_zoom">
-                    {/* <span className="material-symbols-outlined">play_circle</span> */}
-                    <img src={courage} alt="Not suported" />
+                    <Link to='/coragem' href="#divContainer" className='boxImg'>
+                    <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/yLn8nI9Ec3LZ1WflYxo9MjF4BBg.jpg" alt="Not suported" />
+                    </Link>
                 </div>
 
                 <div className="img_hover_zoom">
-                    {/* <span className="material-symbols-outlined">play_circle</span> */}
-                    <img src={bob} alt="Not suported" />
+                    <Link to='/bobesponja' href="#divContainer" className='boxImg'>
+                    <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/eTTsOyXm49jixiQJ93L97CCvVBk.jpg" alt="Not suported" />
+                    </Link>
                 </div>
 
-            
-        </Slider>
+                <div className="img_hover_zoom">
+                    <Link to='/tomejerry' href="#divContainer" className='boxImg'>
+                    <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/t0VTMU4UI8XlaryymvNKjnD1TXc.jpg" alt="Not suported" />
+                    </Link>
+                </div>
+        
+                </Slider>
 
         </div>
     )

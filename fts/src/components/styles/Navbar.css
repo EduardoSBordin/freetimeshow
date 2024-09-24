@@ -18,7 +18,7 @@ nav{
 
     z-index: 100000;
 }
-nav a{
+nav .linkMenu{
     background: #440074;
     color: #ffff13;
     padding: 7px;
@@ -29,7 +29,7 @@ nav a{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    transition: .3s;
 }
-nav a:hover{
+nav .linkMenu:hover{
     color: #440074;
     background: #ffff13;
 }
@@ -71,6 +71,14 @@ nav a:hover{
     }
     .logo{
         margin-top: 10px;
+        font-size: 16pt;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    .freeText{
+        font-size: 14pt;
+        width: 40px;
     }
     nav{
         height: auto;
@@ -80,7 +88,7 @@ nav a:hover{
     }
     .linkMobile{
         display: block;
-        background: rgba(65, 57, 57, 0);
+        background: rgba(255, 0, 0, 0);
         width: 100px;
         height: auto;
         align-items: center;
@@ -89,21 +97,21 @@ nav a:hover{
         padding: 5px;
         flex-direction: column;
         margin-top: 10px;
+        margin-right: 10px;
     }
     .menuModal{
-        display: none;
-        position:fixed;
-        flex-direction: column;
-    background: rgba(68, 0, 116, 0.69);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-        padding: 10px;
-        margin-left: -10px;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
+            display: none;
+            position: fixed;
+            flex-direction: column;
+            background: rgba(68, 0, 116, 0.69);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            padding: 10px;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+            border-top: 3px solid #ffff13;
     }
     .menuModal.active{
         display: flex;
@@ -127,5 +135,11 @@ nav a:hover{
     }
     .btnModal.active::before{
         content: 'x';
+    }
+    nav .linkMenu{
+        width: 100%;
+        border-radius: 0;
+        background: transparent;
+        
     }
 }

@@ -1,18 +1,16 @@
 
 .main{
-    background-image: url(../imgs/ham2Cover2.webp);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 1000px;
+
+    height: 100%;
+    width: 100%;
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #440074;
 }
 .divContainer{
 
-    background: rgba(0, 0, 0, 0.51);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.9px);
-    -webkit-backdrop-filter: blur(6.9px);
     width: 100%;
     height: 100%;
     display: flex;
@@ -21,12 +19,11 @@
 }
 .content{
 
-    background: rgba(255, 255, 0, 0);
-    width: 70%;
-    height: auto;
-    padding: 20px;
+    background: rgb(255, 255, 0);
+    background: linear-gradient(#ffffff00,#440074);
+    width: 100%;
+    height: 100%;
     color: black;
-    margin-top: 60px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -35,6 +32,10 @@
 .videoContent{
 
     background: rgba(255, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
 }
 
 .imgAd{
@@ -42,38 +43,82 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .divTxt{
-
-    /* background: rgba(0, 0, 0, 0.51);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.9px);
-    -webkit-backdrop-filter: blur(6.9px); */
-
+    background: rgba(255, 0, 0, 0);
     color: #ffff13;
     width: 50%;
-    margin-left: 20px;
-
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-}
-h1{
-    font-size: 18pt;
-}
-p{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 14pt;
-    width: 90%;
     text-align: center;
 }
+.about{
+    background: rgba(255, 0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    gap: 20px;
+    text-align: center;
+}
+#titleAbout{
+    font-size: 26pt;
+    margin-top: 50%;
+    color: #ffff13;
+    text-shadow:0px 0px 20px  rgb(0, 0, 0) ;
+}
+#textAbout{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    width: 50%;
+    text-align: center;
+    margin-top: 20px;
+}
+#btnWatch{
+    background: #ffff13;
+      color: #440074;
+      border: 2px solid #440074;
+      border-radius: 25px;
+      text-decoration: none;
+      padding: 10px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-size: 10pt;
+      font-weight: bolder;
+      cursor: pointer;
+      transition: .4s;
+}
+#btnWatch:hover{
+    background: #6700b1;
+    color: #ffff13;
+}
+.infoAbout{
+    background: rgba(255, 0, 0, 0);
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.yearRelease, .typeGenres, .durationTime{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+iframe{
+    margin-top: 40px;
+}
 @media screen and (max-width:600px){
-    p{
-        width: 100%;
+    #textAbout{
+        width: 80%;
         
     }
     .divTxt{
         width: 100%;
+        text-align: center;
     }
     iframe{
         width: 400px;
@@ -82,5 +127,18 @@ p{
     .main{
         height: auto;
         width: 100%;
+    }
+    #titleAbout{
+        font-size: 20pt;
+        margin-left: 0px;
+        margin-top: 50%;
+    }
+    .content{
+        gap: 30px;
+    }
+    .infoAbout{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 }
