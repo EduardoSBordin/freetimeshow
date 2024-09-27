@@ -1,39 +1,47 @@
-import React from 'react';
-import Home from './components/pages/Home';
-
-import Hamburguer from './components/pages/cartoons/Hamburguer';
-import Simpsons from './components/pages/cartoons/Simpsons';
-import Coragem from './components/pages/cartoons/Coragem';
-import BobEsponja from './components/pages/cartoons/BobEsponja';
-import TomEJerryy from './components/pages/cartoons/TomEJerry';
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, {useEffect, useState}from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import Navbar from './components/pages/Navbar';
+import './components/styles/Navbar.css'
 import './App.css'
 
+import Router1 from './components/pages/Router1';
+import Router2 from './components/pages/Router2';
+
 function App() {
+
+  // Adding the header black effect
+  const [blackHeader, setBlackHeader] = useState(false);
+
+  // useEffet to black 
+  useEffect(() => {
+    const scrollListener = () => {
+      if(window.scrollY > 10){
+        setBlackHeader(true);
+      }else{
+        setBlackHeader(false);
+      }
+    }
+
+    window.addEventListener('scroll', scrollListener);
+
+    return () => {
+      window.addEventListener('scroll', scrollListener);
+    }
+  }, [])
+
+
   return (
    <>
-   <Router>
-    <Navbar />
-    <section className="container">
 
-    <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/hamburguer' element={<Hamburguer />} />
-        <Route exact path='/Coragem' element={<Coragem />} />
-        <Route exact path='/BobEsponja' element={<BobEsponja />} />
-        <Route exact path='/tomejerry' element={<TomEJerryy />} />
-        <Route exact path='/simpsons' element={<Simpsons />} />
-    </Routes> 
-
- 
-    </section>
-
-
-   </Router>
+    
+    {/* <Navbar black={blackHeader}/> */}
+    <Router>
+      <Navbar black={blackHeader}/>
+    <Router1 />
+    </Router>
+   
    </>
   );
 }

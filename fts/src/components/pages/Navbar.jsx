@@ -1,23 +1,28 @@
 import '../styles/Navbar.css'
 import { Link } from 'react-router-dom';
+import logo from './logo2.png'
+import React, { useState, useEffect } from 'react';
 
-function Navbar({to, title}){
+function Navbar({black}){
 
     function showModal(){
         document.querySelector('.menuModal').classList.toggle('active');
         document.querySelector('.btnModal').classList.toggle('active');
     }
 
+   
+
     return(
     <>
-        <nav>
-
-            <h1 className='logo'> <p className='freeText'>Free</p> TimeShow </h1>
+        <nav className={black ? 'black' : ''}>
+            <img src={logo} alt="Not suported" className='logoImg'/>
 
             <div className="links">
 
-            <Link to='/' className='linkMenu' href="#upHome">Inicio</Link>
-            <Link to='/hamburguer' className='linkMenu'>Desenhos</Link>
+            <Link to='/' className='linkMenu'>Inicio</Link>
+            <a href="#cartoon" className='linkMenu'>Desenhos</a>
+            <a href="#movies" className='linkMenu'>Filmes</a>
+            <a href="#series" className='linkMenu'>Séries</a>
 
             </div>
 
@@ -26,7 +31,9 @@ function Navbar({to, title}){
 
                 <div className="menuModal">
                 <Link to='/' className='linkMenu'>Inicio</Link>
-                <Link to='/hamburguer'  className='linkMenu'>Desenhos</Link>
+            <a href="#cartoon" className='linkMenu'>Desenhos</a>
+            <a href="#movies" className='linkMenu'>Filmes</a>
+            <a href="#series" className='linkMenu'>Séries</a>
                 </div>
             </div>
     

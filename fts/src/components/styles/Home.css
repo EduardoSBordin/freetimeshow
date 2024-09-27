@@ -25,12 +25,11 @@
   }
   
 
-  #cartoon{
+  #cartoon, #movies, #series{
     width: 80%;
-    height: 500px;
+    height: auto;
     background: transparent;
     margin: auto;
-  
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -39,6 +38,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   .contentHome{
     /* background: rgba(49, 49, 49, 0.247);
@@ -65,12 +65,27 @@
   .divBtnAboveTitle{
     display: none;
   }
+  .toWath{
+    background: #440074;
+    color: #ffff13;
+    border: 2px solid #ffff13;
+    text-decoration: none;
+    padding: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 10pt;
+    font-weight: bolder;
+    transition: all ease-in-out .4s;
+  }
+  .toWath:hover{
+    background: #ffff13;
+    color: #440074;
+  }
   @media screen and (max-width:600px){
     .txtResume{
-      display: none;
+      display: block;
     }
     .txtTitle{
-      margin-top: 30%;
+      margin-top: 10%;
     }
     .divBtnAboveTitle{
       display: flex;
@@ -92,13 +107,14 @@
       font-size: 10pt;
       font-weight: bolder;
     }
-    .modalInf{
-      background: #440074;
-      color: #ffff13;
-      border: 2px solid #ffff13;
-      padding: 10px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      font-size: 10pt;
-      font-weight: bolder;
+    .textHome{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 0, 0, 0);
+      margin: auto;
+      margin-top: 40%;
     }
   }

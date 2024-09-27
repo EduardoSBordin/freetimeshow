@@ -1,7 +1,3 @@
-import sim from '../imgs/sim1.jpg'
-import courage from '../imgs/couragedog.png'
-import bob from '../imgs/spongebob.jpg'
-import ham from '../imgs/ham2.jpg'
 import '../styles/CartoonsHome.css'
 import { Link } from 'react-router-dom'
 import Slider from 'react-slick'
@@ -13,7 +9,7 @@ function MoviesHome(){
     let settings = {
         
         infinite: true,
-        speed: 700,
+        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -23,35 +19,46 @@ function MoviesHome(){
 
     return(
         <div className='container'>
-            <h1>FILMES</h1>
+            <h1 className='titleRow'>FILMES</h1>
         
-            <Slider {...settings}>
+            <Slider className='slider' {...settings}>
 
         
         
                 <div className="img_hover_zoom">
-                    <Link to='/hamburguer' href="#divContainer">
-                        {/* <span className="material-symbols-outlined">play_circle</span> */}
-                    <img src={ham} alt="Not suported" />
+                    <Link to='/piratas' href="#divContainer" className='boxImg'>
+                        <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/xCV0CTZqVBduQqylkelvbDxOdLO.jpg" alt="Not suported" />
                     </Link>
                 </div>
 
                 <div className="img_hover_zoom">
-                    <Link to='/'>
-                        {/* <span className="material-symbols-outlined">play_circle</span> */}
-                    <img src={sim} alt="Not suported" />
+                    <Link to='/mission' href="#divContainer" className='boxImg'>
+                        <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/cNFHTxLRT35vYqAUpZ3LaZrbvbQ.jpg" alt="Not suported" />
                     </Link>
                 </div>
 
 
                 <div className="img_hover_zoom">
-                    {/* <span className="material-symbols-outlined">play_circle</span> */}
-                    <img src={courage} alt="Not suported" />
+                    <Link to='/sorte' href="#divContainer" className='boxImg'>
+                    <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/ywj468m2EOFx3ZTzhIum2OcxHBi.jpg" alt="Not suported" />
+                    </Link>
                 </div>
 
                 <div className="img_hover_zoom">
-                    {/* <span className="material-symbols-outlined">play_circle</span> */}
-                    <img src={bob} alt="Not suported" />
+                    <Link to='/dose' href="#divContainer" className='boxImg'>
+                    <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/u5X9qjUfIZDmlVJXJ7xJVyyHZFa.jpg" alt="Not suported" />
+                    </Link>
+                </div>
+
+                <div className="img_hover_zoom">
+                    <Link to='/mafia' href="#divContainer" className='boxImg'>
+                    <span className="material-symbols-outlined spanPlay">play_circle</span>
+                    <img src="https://image.tmdb.org/t/p/original/78brsalBRfBg1ivGtpJ2BUUNKJe.jpg" alt="Not suported" />
+                    </Link>
                 </div>
         
                 </Slider>

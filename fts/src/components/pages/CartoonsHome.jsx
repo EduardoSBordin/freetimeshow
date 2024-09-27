@@ -9,7 +9,7 @@ function CartoonsHome(){
     let settings = {
         
         infinite: true,
-        speed: 700,
+        speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
@@ -19,9 +19,9 @@ function CartoonsHome(){
 
     return(
         <div className='container'>
-            <h1>DESENHOS</h1>
+            <h1 className='titleRow'>DESENHOS</h1>
         
-            <Slider {...settings}>
+            <Slider className='slider' {...settings}>
 
         
         
