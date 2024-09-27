@@ -37,9 +37,6 @@ function App() {
 
   return (
    <>
-
-    
-    {/* <Navbar black={blackHeader}/> */}
     <Router>
       <Navbar black={blackHeader}/>
     <Router1 />

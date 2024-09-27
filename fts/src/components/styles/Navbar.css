@@ -51,6 +51,23 @@ nav .linkMenu:hover{
     width: 80px;
     margin-left: 50px;
 }
+.menuModal{
+    display: none;
+    position: fixed;
+    flex-direction: column;
+    background: rgba(68, 0, 116, 0.69);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid #ffff13;
+}
+.menuModal.active{
+display: flex;
+}
 @media screen and (max-width:600px){
     
     .links{
@@ -77,23 +94,7 @@ nav .linkMenu:hover{
         margin-top: 10px;
         margin-right: 10px;
     }
-    .menuModal{
-            display: none;
-            position: fixed;
-            flex-direction: column;
-            background: rgba(68, 0, 116, 0.69);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            padding: 10px;
-            gap: 10px;
-            align-items: center;
-            justify-content: center;
-            border-top: 3px solid #ffff13;
-    }
-    .menuModal.active{
-        display: flex;
-    }
+    
     .btnModal{
         background: transparent;
         font-weight: bolder;

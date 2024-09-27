@@ -56,7 +56,7 @@
     text-align: center;
 }
 .about{
-    background: rgba(255, 0, 0, 0);
+    background: rgba(255, 0, 0, 0.925);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,6 +79,8 @@
     width: 50%;
     text-align: center;
     margin-top: 20px;
+    background: rgba(255, 0, 0, 0);
+    margin: auto;
 }
 #btnWatch{
     background: #ffff13;
@@ -114,7 +116,7 @@ iframe{
 @media screen and (max-width:600px){
     #textAbout{
         width: 80%;
-        
+        text-align: center;
     }
     .divTxt{
         width: 100%;
