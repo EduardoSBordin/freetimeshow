@@ -4,11 +4,16 @@ import SeriesHome from './SeriesHome';
 
 import '../styles/Home.css'
 import { Link } from 'react-router-dom';
+import React, {useEffect, useState}from 'react';
+
 
 function Home(){
 
+  
+
     return(
         <div className='mainHome' id='home'>
+
 
     <section id='home' className='upHome' style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original/4InwNJ8yl1L4kf7rZvPHWJFQpSV.jpg)`,
@@ -40,7 +45,7 @@ function Home(){
     </section>
  
     <section id='cartoon'>
-    <CartoonsHome/> 
+    <CartoonsHome id='cartoonSlider'/> 
     </section>
 
     <section id='movies'>

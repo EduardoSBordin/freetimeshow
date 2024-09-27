@@ -77,6 +77,10 @@ button.slick-arrow.slick-prev::before{
   align-items: start;
   flex-wrap: wrap;
 }
+.container{
+  margin-top: 50px;
+  width: 100%;
+}
 @media screen and (max-width:600px) {
     .contentSeriesRow{
       gap: 8px;

@@ -13,13 +13,22 @@ import Mafia from './films/Mafia';
 import Patroa from './series/Patroa';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+import CartoonsHome from './CartoonsHome';
+import MoviesHome from './MoviesHome';
+import SeriesHome from './SeriesHome';
+
 function Router1(){
 
     return (
 <>  
 
         <Routes>
+        
         <Route exact path='/' element={<Home />} />
+        <Route exact path='/cartoonshome' element={<CartoonsHome />} />
+        <Route exact path='/movieshome' element={<MoviesHome />} />
+        <Route exact path='/serieshome' element={<SeriesHome />} />
+
         <Route exact path='/hamburguer' element={<Hamburguer />} />
         <Route exact path='/Coragem' element={<Coragem />} />
         <Route exact path='/BobEsponja' element={<BobEsponja />} />

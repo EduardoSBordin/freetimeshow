@@ -39,12 +39,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: rgba(255, 0, 0, 0);
+    width: 100%;
   }
   .contentHome{
-    /* background: rgba(49, 49, 49, 0.247);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px); */
     
     background: linear-gradient(#ffffff00,#440074);
     width: 100%;
