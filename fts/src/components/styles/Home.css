@@ -30,9 +30,10 @@
     height: auto;
     background: transparent;
     margin: auto;
-    display: flex;
+    display: flex;  
     flex-direction: column;
     padding: 10px;
+
   }
   .mainHome{
     display: flex;
@@ -77,6 +78,15 @@
   .toWath:hover{
     background: #ffff13;
     color: #440074;
+  }
+  .upHome1, .upHome2, .upHome3{
+    transition: all ease-in-out 1s;
+    opacity: 0;
+    display: none;
+  }
+  .upHome1.show, .upHome2.show, .upHome3.show{
+    opacity: 1;
+    display: block;
   }
   @media screen and (max-width:600px){
     .txtResume{

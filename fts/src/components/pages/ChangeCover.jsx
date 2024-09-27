@@ -1,7 +1,3 @@
-import CartoonsHome from './CartoonsHome';
-import MoviesHome from './MoviesHome';
-import SeriesHome from './SeriesHome';
-
 import '../styles/Home.css'
 import { Link } from 'react-router-dom';
 import React, {useEffect, useState}from 'react';
@@ -11,75 +7,63 @@ function ChangeCover(){
     useEffect(() => {
         
         let el1 = document.querySelector('.upHome1');
-        let el2 = document.querySelector('.upHome1');
+        let el2 = document.querySelector('.upHome2');
+        let el3 = document.querySelector('.upHome3');
+             
+        let currentVisible = 1; 
+        const intervalTime = 3000; 
+        const transitionTime = 1000;
 
-        if(el1 && el2){
+    const hideAllCovers = () => {
+        el1.style.display = 'none';
+        el2.style.display = 'none';
+        el3.style.display = 'none';
+        el1.style.opacity = '0';
+        el2.style.opacity = '0';
+        el3.style.opacity = '0';
+    };
 
-            let counter1 = 0;
-            let myInterval1;
-            let speed = 500;
-            function cover1(){
-        
-                myInterval1 = setInterval(() => {
-                    counter1++;
-                    if(counter1 === 10){
-                        counter1 = 0;
-                        clearInterval(myInterval1);
-                        window.document.querySelector('.upHome1').style.display = 'none';
-                        window.document.querySelector('.upHome2').style.display = 'block';
-                        window.document.querySelector('.upHome3').style.display = 'none';
-    
-                        cover2();
-                    }
-                    console.log(counter1);
-                }, speed)
-            }
-        
-            function cover2(){
-                myInterval1 = setInterval(() => {
-                    counter1++;
-                    if(counter1 === 10){
-                        counter1 = 0;
-                        clearInterval(myInterval1);
-                       window.document.querySelector('.upHome1').style.display = 'none';
-                       window.document.querySelector('.upHome2').style.display = 'none';
-                       window.document.querySelector('.upHome3').style.display = 'block';
-    
-                        cover3();
-                    }
-                    console.log(counter1);
-                }, speed)
-            }
+    const showNextCover = () => {
+        hideAllCovers(); //
 
-            function cover3(){
-                myInterval1 = setInterval(() => {
-                    counter1++;
-                    if(counter1 === 10){
-                        counter1 = 0;
-                        clearInterval(myInterval1);
-                       window.document.querySelector('.upHome1').style.display = 'block';
-                       window.document.querySelector('.upHome2').style.display = 'none';
-                       window.document.querySelector('.upHome3').style.display = 'none';
-    
-                        cover1();
-                    }
-                    console.log(counter1);
-                }, speed)
-            }
-            cover1();
+        if (currentVisible === 1) {
+            el1.style.display = 'block';
+            setTimeout(() => {
+                el1.style.opacity = '1';
+                el2.style.opacity = '0';
+                el3.style.opacity = '0';
+            }, 10); 
+        } else if (currentVisible === 2) {
+            el2.style.display = 'block';
+            setTimeout(() => {
+                el2.style.opacity = '1';
+                el1.style.opacity = '0';
+                el3.style.opacity = '0';
+            }, 10);
+        } else if (currentVisible === 3) {
+            el3.style.display = 'block';
+            setTimeout(() => {
+                el1.style.opacity = '0';
+                el2.style.opacity = '0';
+                el3.style.opacity = '1';
 
-            return () => {
-                clearInterval(myInterval1); // Limpa o intervalo ativo
-                
-              };
-        
+            }, 10);
         }
 
-        // changeCover();
+        currentVisible = currentVisible === 3 ? 1 : currentVisible + 1;
+
+        setTimeout(() => {
+            showNextCover();
+        }, intervalTime + transitionTime); 
+    };
+
+    showNextCover();
     }, []);
     return(
+
         <>
-        <section id='home' className='upHome1' style={{
+        
+    <section  className='upHome1' style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original/4InwNJ8yl1L4kf7rZvPHWJFQpSV.jpg)`,
         backgroundAttachment: 'scroll',
         backgroundPosition: 'center',
@@ -108,13 +92,13 @@ function ChangeCover(){
         </div>
     </section>
 
-    <section id='home' className='upHome2' style={{
+    <section className='upHome2' style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original/wE04of3oVs47rJjEsTvc7LfrWZl.jpg)`,
         backgroundAttachment: 'scroll',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        display: 'none',
+        display: 'none'
     }}>
         <div className="contentHome">
 
@@ -136,13 +120,13 @@ function ChangeCover(){
         </div>
     </section>
 
-    <section id='home' className='upHome3' style={{
+    <section className='upHome3' style={{
         backgroundImage: `url(https://image.tmdb.org/t/p/original/2Qwb7EayKsD2cuB3I2u2k2VU3Lb.jpg)`,
         backgroundAttachment: 'scroll',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        display: 'none',
+        display: 'none'
     }}>
         <div className="contentHome">
 
