@@ -31,9 +31,9 @@ function Navbar({black}){
 
                 <div className={`menuModal ${isModalActive ? 'active' : ''}`}>
                 <Link to='/' className='linkMenu'>Inicio</Link>
-            <a href="#cartoon" className='linkMenu'>Desenhos</a>
-            <a href="#movies" className='linkMenu'>Filmes</a>
-            <a href="#series" className='linkMenu'>Séries</a>
+                <Link to='/cartoonshome' className='linkMenu'>Desenhos</Link>
+                <Link to='/movieshome' className='linkMenu'>Filmes</Link>
+                <Link to='/serieshome' className='linkMenu'>Series</Link>
                 </div>
             </div>
     
