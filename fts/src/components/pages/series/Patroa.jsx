@@ -13,7 +13,6 @@ function Patroa(){
 
     function openModalSeasons(){
 
-        document.querySelector('.modalSeasons').classList.toggle('openModalSeasons');
         document.querySelector('.modalSeasons').style.display = 'block';
 
     }

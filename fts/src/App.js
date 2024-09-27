@@ -5,12 +5,14 @@ import "slick-carousel/slick/slick-theme.css"
 import Navbar from './components/pages/Navbar';
 import './components/styles/Navbar.css'
 import './App.css'
+import './components/styles/Home.css'
 
 import Router1 from './components/pages/Router1';
 import Router2 from './components/pages/Router2';
 
 
 function App() {
+  
 
   // Adding the header black effect
   const [blackHeader, setBlackHeader] = useState(false);

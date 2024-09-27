@@ -1,16 +1,16 @@
 import '../styles/Navbar.css'
 import { Link } from 'react-router-dom';
 import logo from './logo2.png'
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 function Navbar({black}){
 
-    function showModal(){
-        document.querySelector('.menuModal').classList.toggle('active');
-        document.querySelector('.btnModal').classList.toggle('active');
-    }
 
+    const [isModalActive, setIsModalActive] = useState(false);
    
+    const showModal = () => {
+        setIsModalActive(!isModalActive);
+    };
 
     return(
     <>
@@ -27,9 +27,9 @@ function Navbar({black}){
             </div>
 
             <div className="linkMobile">
-                <button className='btnModal' onClick={showModal}></button>
+                <button className={`btnModal ${isModalActive ? 'active' : ''}`} onClick={showModal}></button>
 
-                <div className="menuModal">
+                <div className={`menuModal ${isModalActive ? 'active' : ''}`}>
                 <Link to='/' className='linkMenu'>Inicio</Link>
             <a href="#cartoon" className='linkMenu'>Desenhos</a>
             <a href="#movies" className='linkMenu'>Filmes</a>

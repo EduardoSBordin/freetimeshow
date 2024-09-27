@@ -1,4 +1,5 @@
 import '../../styles/Hamburguer.css'
+import '../../styles/Home.css'
 
 function BobEsponja(){
 

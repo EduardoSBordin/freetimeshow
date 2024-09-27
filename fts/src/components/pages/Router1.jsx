@@ -17,6 +17,10 @@ import CartoonsHome from './CartoonsHome';
 import MoviesHome from './MoviesHome';
 import SeriesHome from './SeriesHome';
 
+import ChangeCover from './ChangeCover';
+
+import '../styles/Home.css'
+
 function Router1(){
 
     return (
@@ -25,23 +29,25 @@ function Router1(){
         <Routes>
         
         <Route exact path='/' element={<Home />} />
-        <Route exact path='/cartoonshome' element={<CartoonsHome />} />
-        <Route exact path='/movieshome' element={<MoviesHome />} />
-        <Route exact path='/serieshome' element={<SeriesHome />} />
+        <Route  path='/cartoonshome' element={<CartoonsHome />} />
+        <Route  path='/movieshome' element={<MoviesHome />} />
+        <Route  path='/serieshome' element={<SeriesHome />} />
 
-        <Route exact path='/hamburguer' element={<Hamburguer />} />
-        <Route exact path='/Coragem' element={<Coragem />} />
-        <Route exact path='/BobEsponja' element={<BobEsponja />} />
-        <Route exact path='/tomejerry' element={<TomEJerry />} />
-        <Route exact path='/simpsons' element={<Simpsons />} />
+        <Route  path='/hamburguer' element={<Hamburguer />} />
+        <Route  path='/Coragem' element={<Coragem />} />
+        <Route  path='/BobEsponja' element={<BobEsponja />} />
+        <Route  path='/tomejerry' element={<TomEJerry />} />
+        <Route  path='/simpsons' element={<Simpsons />} />
 
-        <Route exact path='/piratas' element={<Piratas />} />
-        <Route exact path='/mission' element={<Mission />} />
-        <Route exact path='/sorte' element={<Sorte />} />
-        <Route exact path='/dose' element={<Dose />} />
-        <Route exact path='/mafia' element={<Mafia />} />
+        <Route  path='/piratas' element={<Piratas />} />
+        <Route  path='/mission' element={<Mission />} />
+        <Route  path='/sorte' element={<Sorte />} />
+        <Route  path='/dose' element={<Dose />} />
+        <Route  path='/mafia' element={<Mafia />} />
 
-        <Route exact path='/patroa' element={<Patroa />} />
+        <Route  path='/patroa' element={<Patroa />} />
+
+        <Route  path='/changecover' element={<ChangeCover />} />
 
     </Routes> 
  
