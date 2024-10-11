@@ -1,36 +1,53 @@
-import '../styles/Navbar.css'
-import { Link } from 'react-router-dom'
+import "../styles/Navbar.css";
+import { Link } from "react-router-dom";
+import logo from "./logo4.png";
+import React, { useState, useEffect } from "react";
 
-function NavbarCategories({to, title}){
+function NavbarCategories({ black, to, nameBtn }) {
+  const [isModalActive, setIsModalActive] = useState(false);
 
-    function showModal() {
-        document.querySelector('.menuModal').classList.toggle('active');
-        document.querySelector('.btnModal').classList.toggle('active');
-    }
+  const showModal = () => {
+    setIsModalActive(!isModalActive);
+  };
 
-    return (
-        <>
-            <nav>
+  // Adding the header black effect
+  const [blackHeader, setBlackHeader] = useState(false);
 
-                <h1 className='logo'> <p className='freeText'>Free</p> TimeShow </h1>
+  // useEffet to black
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
+      }
+    };
 
-                <div className="links">
-                    <a href="/">INICIO</a>
-                    <a href="#cartoon">DESENHOS</a>
+    window.addEventListener("scroll", scrollListener);
 
-                </div>
+    return () => {
+      window.addEventListener("scroll", scrollListener);
+    };
+  }, []);
 
-                <div className="linkMobile">
-                    <button className='btnModal' onClick={showModal}></button>
+  return (
+    <>
+      <nav className={blackHeader ? "black" : ""}>
+        <img src={logo} alt="Not suported" className="logoImg" />
 
-                    <div className="menuModal">
-                        <a href="/">INICIO</a>
-                        <a href="#cartoon">DESENHOS</a>
-                    </div>
-                </div>
+        <div className="links">
+          <Link to="/" className="linkMenu">
+            <span class="material-symbols-outlined">undo</span>
+          </Link>
+        </div>
 
-            </nav>
+        <div className="linkMobile">
+          <Link to="/" className="linkMenu">
+            <span class="material-symbols-outlined">undo</span>
+          </Link>
+        </div>
+      </nav>
     </>
-    )
+  );
 }
-export default NavbarCategories
+export default NavbarCategories;

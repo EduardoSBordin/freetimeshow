@@ -1,109 +1,105 @@
-
 .img_hover_zoom {
-    overflow: hidden; 
-    border-radius: 5px;
-    height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  height: 100%;
+}
+.img_hover_zoom img {
+  transition: all ease 0.3s;
+  cursor: pointer;
+  transform: scale(1);
+  width: 200px;
+}
+.img_hover_zoom:hover img {
+  transform: scale(1.1);
+  filter: blur(1.5px) grayscale(50%);
+}
+.img_hover_zoom:hover span {
+  filter: opacity(100%);
+}
 
-    
+.spanPlay {
+  position: absolute;
+  z-index: 10;
+  filter: opacity(0%);
+  transition: all ease 0.5s;
+  cursor: pointer;
+  background: rgba(255, 0, 0, 0);
+  color: #ffff13;
+}
+.material-symbols-outlined {
+  font-size: 60pt;
+}
+.boxImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.titleRow {
+  margin-top: 20px;
+  margin-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.slick-slide > div {
+  margin: 0 10px;
+  background: rgba(255, 0, 0, 0);
+}
+.slick-slide {
+  background: rgba(255, 255, 0, 0);
+}
+button.slick-arrow.slick-next::before,
+button.slick-arrow.slick-prev::before {
+  color: #ffff13;
+  font-size: 32pt;
+  transition: 0.4s;
+}
+button.slick-arrow.slick-next::before {
+  margin-left: 10px;
+}
+button.slick-arrow.slick-prev::before {
+  margin-left: -20px;
+}
+.slider {
+  background: rgba(255, 0, 0, 0);
+  margin-top: 20px;
+}
+.contentSeriesRow {
+  background: rgba(255, 0, 0, 0);
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  align-items: start;
+  flex-wrap: wrap;
+}
+.container {
+  margin-top: 50px;
+  width: 100%;
+}
+.material-symbols-outlined {
+  font-size: 20pt;
+}
+@media screen and (max-width: 600px) {
+  .contentSeriesRow {
+    gap: 8px;
+  }
+  .slick-slide {
+    display: flex;
+    flex-direction: row;
   }
   .img_hover_zoom img {
     transition: all ease 0.3s;
     cursor: pointer;
     transform: scale(1);
-    width: 200px;
-
+    width: 150px;
   }
-  .img_hover_zoom:hover img{
-    transform: scale(1.1);
-    filter: blur(1.5px) grayscale(50%);
-  }
-  .img_hover_zoom:hover span{
-    filter: opacity(100%);
-    
-  }
-
-.spanPlay{
-
-    position: absolute;
-    z-index: 10;
-    filter: opacity(0%);
-    transition: all ease 0.5s;
-    cursor: pointer;
-    background: rgba(255, 0, 0, 0);
+  button.slick-arrow.slick-next::before,
+  button.slick-arrow.slick-prev::before {
     color: #ffff13;
+    font-size: 22pt;
   }
-.material-symbols-outlined{
-    font-size: 60pt;
-}
-.boxImg{
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-}
-.titleRow{
-    margin-top: 20px;
-    margin-left: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-} 
-.slick-slide > div{
-    margin: 0 10px;
-    background: rgba(255, 0, 0, 0);
-}
-.slick-slide {
-    background: rgba(255, 255, 0, 0);
-}
-button.slick-arrow.slick-next::before, button.slick-arrow.slick-prev::before{
-  color: #ffff13;
-  font-size: 32pt;
-  transition: .4s;
-}
-button.slick-arrow.slick-next::before{
-  margin-left: 10px;
-}
-button.slick-arrow.slick-prev::before{
-  margin-left: -20px;
-}
-.slider{
-  background: rgba(255, 0, 0, 0);
-  margin-top: 20px;
-}
-.contentSeriesRow{
-  background: rgba(255, 0, 0, 0);
-  display: flex;
-  gap:20px;
-  margin-top: 20px;
-  align-items: start;
-  flex-wrap: wrap;
-}
-.container{
-  margin-top: 50px;
-  width: 100%;
-}
-@media screen and (max-width:600px) {
-    .contentSeriesRow{
-      gap: 8px;
-    }
-    .slick-slide{
-        display: flex;
-        flex-direction: row;
-    }
-      .img_hover_zoom img {
-        transition: all ease 0.3s;
-        cursor: pointer;
-        transform: scale(1);
-        width: 150px;
-    
-      }
-      button.slick-arrow.slick-next::before, button.slick-arrow.slick-prev::before{
-        color: #ffff13;
-        font-size: 22pt;
-      }
-      button.slick-arrow.slick-prev::before{
-        margin-left: -5px;
-      }
-      button.slick-arrow.slick-next::before{
-        margin-left: 0px;
-      }
+  button.slick-arrow.slick-prev::before {
+    margin-left: -5px;
+  }
+  button.slick-arrow.slick-next::before {
+    margin-left: 0px;
+  }
 }
