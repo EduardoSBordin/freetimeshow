@@ -48,7 +48,7 @@ function Simpsons() {
           id="iframe"
           width="760"
           height="415"
-          src="https://www.youtube.com/embed/Dx77tTFVJ40?si=bKUnQpeJl0wpDS8w"
+          src="https://www.youtube.com/embed/jsUbBKXxPLw?si=6mIPbD2cEUNExUDc"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
